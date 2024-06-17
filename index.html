@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hi, I'm <span>Dang</span>!!!<br>A Vietnamese in Singapore</h1>
+        </div>
+    </div>
+<!-- ---------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a passionate coder with a strong passion for all things tech, especially software engineering, AI and blockchain. I enjoy diving deep into the technical aspects of these fields and constantly learning to stay ahead. My goal is to excel in the tech world and contribute to exciting projects while continuing to explore the cutting-edge tech landscape. I'm also keen on gaining a better understanding of the business side of technology, as I believe it's essential for shaping innovative solutions that make a real impact.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span class="skill-category">Web App Development</span>
+                                <div class="skill-list">C, Java, Python, JavaScript</div>
+                            </li>
+                            <li>
+                                <span class="skill-category">Blockchain Development</span>
+                                <div class="skill-list">Solidity, Truffle, Hardhat</div>
+                            </li>
+                            <li>
+                                <span class="skill-category">Data Analytics</span>
+                                <div class="skill-list">Pandas, Numpy, BeautifulSoup, Selenium</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span class="skill-category">May 2024 - Present</span>
+                                <div class="skill-list">Software Engineer Intern at SMU</div>
+                            </li>
+                            <li>
+                                <span class="skill-category">Jan 2024 - Present</span>
+                                <div class="skill-list">Software Engineer Contractor at Andor Fi</div>
+                            </li>
+                            <li>
+                                <span class="skill-category">May 2023 - Dec 2023</span>
+                                <div class="skill-list">Research Intern at RICE Lab</div>
+                            </li>
+                            <li>
+                                <span class="skill-category">Aug 2022 - Present</span>
+                                <div class="skill-list">Coding Instructor at The Logic Coders</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span class="skill-category">2022 - Present</span>
+                                <div class="skill-list">Bachelor of Computer Science at Singapore Management University</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------project----------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/spyderfund.png" alt="SpyderFund">
+                    <div class="project-info">
+                        <h3>SpyderFund</h3>
+                        <p>A blockchain crowdfunding web app on Ethereum that allows everyone to kickstart their projects</p>
+                        <a href="https://github.com/dangtruong01/spyderfund"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/spyderfund.png" alt="Upbit">
+                    <div class="project-info">
+                        <h3>Upbit Webscraping</h3>
+                        <p>A project to scrape all cryptocurrencies' information currently listen on upbit</p>
+                        <a href="https://github.com/dangtruong01/upbit"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/spyderfund.png" alt="Electric">
+                    <div class="project-info">
+                        <h3>Electric</h3>
+                        <p>Mobile app for booking of electric vehicles charging station.</p>
+                        <a href="https://github.com/JJSeah/CS203T7"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>My Conta</h1>
+                </div>
+                <div class="contact-right">
+    
+                </div>
+            </div>
+        </div>
+     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
