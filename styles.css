@@ -187,8 +187,10 @@ nav ul li a:hover::after {
 .project img {
     width: 100%;
     border-radius: 10px;
-    display: block;
+    display: grid;
+    place-items: center;
     transition: transform 0.5s;
+    height: 400px;
 }
 
 .project-info {
@@ -238,4 +240,38 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
-/* ---------projects----------- */
+/* ---------contact----------- */
+#contact {
+    padding: 50px 0;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer h1 {
+    font-weight: 300;
+}
+
+.socials {
+    margin: 20px 0;
+}
+
+.socials a {
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    line-height: 50px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
